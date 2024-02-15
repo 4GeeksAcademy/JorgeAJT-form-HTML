@@ -18,13 +18,13 @@
         <div class="col-12 col-lg-8 offset-lg-2">
           <div class="card mt-5">
             <!-- HEADER CARD/FORM -->
-            <div class="card-header">
+            <div class="card-header bg-primary bg-opacity-25">
               <h1>Payment form example</h1>
             </div>
             <!-- FORM -->
             <form>
               <!-- BODY CARD -->
-              <div class="card-body">
+              <div class="card-body bg-primary bg-opacity-10">
                 <div class="alert alert-danger" role="alert">
                   Some fields are missing
                 </div>
@@ -49,15 +49,18 @@
                       maxlength="4"
                     />
                   </div>
-                  <div class="col-4 ps-4 position-relative">
-                    <p class="position-absolute fw-bold">$</p>
+                  <div class="col-4">
                     <label for="amount" class="form-label">Amount</label>
-                    <input
-                      type="text"
-                      class="form-control"
-                      id="amount"
-                      placeholder="Amount"
-                    />
+                    <div class="input-group">
+                      <span class="input-group-text">$</span>
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="amount"
+                        aria-label="Amount (to the nearest dollar)"
+                        placeholder="0.00"
+                      />
+                    </div>
                   </div>
                   <div class="col-6">
                     <label for="firstName" class="form-label">First Name</label>
@@ -137,12 +140,12 @@
                     >
                     <input type="text" class="form-control" id="postalCode" />
                   </div>
-                  <div class="col-8 col-lg-4">
+                  <div class="col-8 col-lg-8 col-xxl-4 px-0 px-sm-2">
                     <label>We accept:</label>
                     <div
-                      class="bg-secondary mt-3 p-2 d-flex justity-content-between rounded-3"
+                      class="bg-primary mt-3 py-2 px-md-2 d-flex justity-content-between rounded-3"
                     >
-                      <div class="form-check form-check-inline ms-3">
+                      <div class="form-check form-check-inline ms-lg-3 ms-1">
                         <input
                           class="form-check-input"
                           type="radio"
@@ -152,11 +155,11 @@
                         />
                         <label class="form-check-label" for="mastercard"
                           ><i
-                            class="fa-brands fa-cc-mastercard text-light bg-secondary fs-4"
+                            class="fa-brands fa-cc-mastercard text-light bg-primary fs-3"
                           ></i
                         ></label>
                       </div>
-                      <div class="form-check form-check-inline ms-3">
+                      <div class="form-check form-check-inline ms-lg-3 ms-0">
                         <input
                           class="form-check-input"
                           type="radio"
@@ -166,11 +169,11 @@
                         />
                         <label class="form-check-label" for="visa"
                           ><i
-                            class="fa-brands fa-cc-visa text-light bg-secondary fs-4"
+                            class="fa-brands fa-cc-visa text-light bg-primary fs-3"
                           ></i
                         ></label>
                       </div>
-                      <div class="form-check form-check-inline ms-3">
+                      <div class="form-check form-check-inline ms-lg-3 ms-0">
                         <input
                           class="form-check-input"
                           type="radio"
@@ -180,27 +183,43 @@
                         />
                         <label class="form-check-label" for="dinnerClub"
                           ><i
-                            class="fa-brands fa-cc-diners-club text-light bg-secondary fs-4"
+                            class="fa-brands fa-cc-diners-club text-light bg-primary fs-3"
                           ></i
                         ></label>
                       </div>
-                      <div class="form-check form-check-inline ms-3">
+                      <div class="form-check form-check-inline ms-lg-3 ms-0">
                         <input
                           class="form-check-input"
                           type="radio"
                           name="inlineRadioOptions"
-                          id="americanExp"
+                          id="paypal"
                           value="option4"
                         />
-                        <label class="form-check-label" for="americanExp"
+                        <label class="form-check-label" for="paypal"
                           ><i
-                            class="fab fa-cc-amex text-light bg-secondary fs-4"
+                            class="fa-brands fa-cc-paypal text-light bg-primary fs-3"
+                          ></i
+                        ></label>
+                      </div>
+                      <div
+                        class="form-check form-check-inline ms-lg-3 ms-0 me-1"
+                      >
+                        <input
+                          class="form-check-input"
+                          type="radio"
+                          name="inlineRadioOptions"
+                          id="bitcoin"
+                          value="option5"
+                        />
+                        <label class="form-check-label" for="bitcoin"
+                          ><i
+                            class="fa-brands fa-bitcoin text-light bg-primary fs-3"
                           ></i
                         ></label>
                       </div>
                     </div>
                   </div>
-                  <div class="col-12 col-lg-6 offset-lg-2">
+                  <div class="col-12 col-lg-12 col-xxl-6 offset-xxl-2">
                     <label for="exampleFormControlTextarea1" class="form-label"
                       >Message</label
                     >
@@ -217,7 +236,7 @@
               </div>
               <!-- FOOTER CARD -->
               <div
-                class="card-footer text-body-secondary d-flex justify-content-end mt-2"
+                class="card-footer text-body-secondary d-flex justify-content-end bg-primary bg-opacity-25"
               >
                 <input
                   type="reset"
